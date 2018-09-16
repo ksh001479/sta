@@ -18,8 +18,15 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="바코드"
        />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="블루투스 연결"
+        />
 
     <SeekBar
         android:id="@+id/seekBar2"
@@ -30,6 +37,6 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="데이터 전송" />
 
 </LinearLayout>
