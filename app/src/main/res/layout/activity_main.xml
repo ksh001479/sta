@@ -39,4 +39,13 @@
         android:layout_height="wrap_content"
         android:text="데이터 전송" />
 
+    <EditText
+        android:id="@+id/count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap/content"/>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap/content"/>
 </LinearLayout>
