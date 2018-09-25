@@ -21,13 +21,6 @@
         android:text="바코드"
        />
 
-    <Button
-        android:id="@+id/btnConnect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="블루투스 연결"
-        />
-
     <SeekBar
         android:id="@+id/seekBar2"
         android:layout_width="match_parent"
@@ -40,12 +33,8 @@
         android:text="데이터 전송" />
 
     <EditText
-        android:id="@+id/count"
         android:layout_width="match_parent"
-        android:layout_height="wrap/content"/>
+        android:layout_height="wrap_content"
+        android:hint="횟수를 입력해주세요 (숫자로)"/>
 
-    <EditText
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap/content"/>
 </LinearLayout>
