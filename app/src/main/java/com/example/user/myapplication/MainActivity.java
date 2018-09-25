@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
     private static ImageView barcode;
 
     int randomNum;
+    EditText editText;
     public static String getPhp;
+    public String count;
+
 
     //Button barButton;
 
@@ -93,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         randomNum = (int) (Math.random() * 100000);
         randomNum *= 10000;
         String barcode_data = String.valueOf(randomNum); //바코드 모양
-
         getPhp = "http://limong.iptime.org/~m30509/stac/GetPhp.php?code="+barcode_data;
 
         Log.d(barcode_data,"바코드값");
@@ -114,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button barButton = (Button) findViewById(R.id.button);
         Button phpButton = (Button) findViewById(R.id.button2);
+        final EditText editText = findViewById(R.id.editText);
+
+
 
 
         barButton.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 //bt.send(String.valueOf(randomNum), true);
             }
         });
+
+
 
         //블루투스 버튼
 //        barButton.setOnClickListener(new View.OnClickListener() {
@@ -135,10 +143,14 @@ public class MainActivity extends AppCompatActivity {
         phpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                count = editText.getText().toString();
+                getPhp = getPhp+"&count="+count;
                 Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getPhp));
                 startActivity(myIntent);
             }
         });
+
+        //EditText
 
 
 //        /////////////블루투스

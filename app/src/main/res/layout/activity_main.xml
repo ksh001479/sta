@@ -33,6 +33,7 @@
         android:text="데이터 전송" />
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="횟수를 입력해주세요 (숫자로)"/>
